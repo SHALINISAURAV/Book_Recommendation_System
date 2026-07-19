@@ -17,7 +17,10 @@ A state-of-the-art book recommendation engine that blends **Collaborative Filter
 
 <br>
 
-[**🚀 Live Demo**](https://bookrecommendationsystem-mb498lnqpnpkuhnvn7zaln.streamlit.app/) &nbsp;•&nbsp; [**📁 GitHub Repository**](https://github.com/SHALINISAURAV/Book_Recommendation_System) &nbsp;•&nbsp; [**🌐 Portfolio**](https://shalinisaurav.github.io) &nbsp;•&nbsp; [**💼 LinkedIn**](https://www.linkedin.com/in/shalini-saurav-649aa22b8/)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-FF4B4B?style=for-the-badge)](https://bookrecommendationsystem-mb498lnqpnpkuhnvn7zaln.streamlit.app/)
+[![GitHub Repository](https://img.shields.io/badge/📁_GitHub_Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SHALINISAURAV/Book_Recommendation_System)
+[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-000000?style=for-the-badge)](https://shalinisaurav.github.io)
+[![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shalini-saurav-649aa22b8/)
 
 </div>
 
