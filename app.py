@@ -162,3 +162,20 @@ else:
                 st.write(book["title"])
                 st.write(book["author"])
                 st.write("---")
+                
+#_____________FOR Streamlit Deployment________________
+import pandas as pd
+import os
+
+# Get the absolute path to the directory where app.py is located
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Build the exact paths to your files
+books_path = os.path.join(BASE_DIR, "books.csv")
+ratings_path = os.path.join(BASE_DIR, "ratings.csv")
+users_path = os.path.join(BASE_DIR, "users.csv")
+
+# Read the CSVs
+books = pd.read_csv(books_path)
+ratings = pd.read_csv(ratings_path)
+users = pd.read_csv(users_path)
