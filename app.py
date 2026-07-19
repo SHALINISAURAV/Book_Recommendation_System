@@ -164,18 +164,28 @@ else:
                 st.write("---")
                 
 #_____________FOR Streamlit Deployment________________
+import streamlit as st
 import pandas as pd
-import os
+import pickle
+import requests
+import io
 
-# Get the absolute path to the directory where app.py is located
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+#  Files ke direct access links
+BASE_URL = "https://huggingface.co/datasets/ShaliniSaurav/book-data-files/resolve/main/"
 
-# Build the exact paths to your files
-books_path = os.path.join(BASE_DIR, "books.csv")
-ratings_path = os.path.join(BASE_DIR, "ratings.csv")
-users_path = os.path.join(BASE_DIR, "users.csv")
+@st.cache_data
+def load_data():
+    # .csv files ko direct URL se load karein
+    books = pd.read_csv(BASE_URL + "books.csv")
+    ratings = pd.read_csv(BASE_URL + "ratings.csv")
+    users = pd.read_csv(BASE_URL + "users.csv")
+    return books, ratings, users
 
-# Read the CSVs
-books = pd.read_csv(books_path)
-ratings = pd.read_csv(ratings_path)
-users = pd.read_csv(users_path)
+@st.cache_resource
+def load_embeddings():
+    # .pkl file ko requests se load karein
+    url = BASE_URL + "embeddings.pkl"
+    response = requests.get(url)
+    # Binary data ko pickle se load karein
+    embeddings, unique_books = pickle.load(io.BytesIO(response.content))
+    return embeddings, unique_books
